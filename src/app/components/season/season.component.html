@@ -1,0 +1,9 @@
+<div style="border: brown 1px solid;">
+    <p>{{season.id}}</p>
+    <p><a [href]="season.url">{{season.url}}</a></p>
+    <p> Season number: {{season.number}}</p>
+    <p> Number of episodes: {{season.episodeOrder}}</p>
+    <p> Premiere date: {{season.premiereDate}}</p>
+    <button type="button" (click)="toggleEpisodeList()">Episodes</button>
+    <app-episode-list [ngClass]="{'show':showEpisodesList,'hide':!showEpisodesList}" ></app-episode-list>
+</div>

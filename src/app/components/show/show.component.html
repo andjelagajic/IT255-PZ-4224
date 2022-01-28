@@ -1,0 +1,15 @@
+<div style="border: brown 1px solid;">
+    <p>{{show.id}}</p>
+    <p><a href="show.url">{{show.name}}</a></p>
+    <p>{{show.type}}</p>
+    <p>{{show.language}}</p>
+    <p>{{show.genres}}</p>
+    <p>{{show.status}}</p>
+    <p>{{show.premiered}}</p>
+    <p>{{show.rating}}</p>
+    <p [innerHtml]= "show.summary"></p>
+    <img [src]="show.image" alt="slika">
+    <p><a [routerLink]="['/seasons',show.id]">Show seasons</a></p>
+    <button *ngIf="page=='shows'" (click)="addShowToUserList()">Add to watch list</button>
+    <button *ngIf="page=='user'" (click)="deleteShowFromUserList()">Delete from list</button>
+</div>

@@ -1,0 +1,9 @@
+<div style="border: green 1px solid;">
+    <p><a [href]="episode.url">{{episode.name}}</a></p>
+    <p>Season: {{episode.season}}</p>
+    <p>Number of episode: {{episode.number}}</p>
+    <p>Airdate: {{episode.airdate}}</p>
+    <p>rating: {{episode.rating}}</p>
+    <img [src]="episode.image" alt="">
+    <p [innerHtml]="episode.summary"></p>
+</div>

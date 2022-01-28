@@ -1,0 +1,7 @@
+<div>
+    Welcome : {{(user$ | async)?.username}}
+
+    <p *ngIf = "(user$ | async)?.list?.length==0">No saved shows. <br> You can save show by clicking on save to user-list button. </p>
+
+    <app-show *ngFor="let item of (user$ | async)?.list" [show]="item" [page]="page"></app-show>
+</div>

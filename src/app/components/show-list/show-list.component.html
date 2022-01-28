@@ -1,0 +1,7 @@
+<select name="" id="" (change)="onChangeGenre($event)">
+    <option value="-1" disabled selected hidden>Genre:</option>
+    <option *ngFor="let genre of genres"  [value]="genre">{{genre}}</option>
+</select>
+
+<app-show *ngFor="let show of shows$ | async  | filterGenre:genre" [show]="show" [page]="page">
+</app-show>
