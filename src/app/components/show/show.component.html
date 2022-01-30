@@ -1,15 +1,21 @@
-<div style="border: brown 1px solid;">
-    <p>{{show.id}}</p>
-    <p><a href="show.url">{{show.name}}</a></p>
-    <p>{{show.type}}</p>
-    <p>{{show.language}}</p>
-    <p>{{show.genres}}</p>
-    <p>{{show.status}}</p>
-    <p>{{show.premiered}}</p>
-    <p>{{show.rating}}</p>
-    <p [innerHtml]= "show.summary"></p>
-    <img [src]="show.image" alt="slika">
-    <p><a [routerLink]="['/seasons',show.id]">Show seasons</a></p>
-    <button *ngIf="page=='shows'" (click)="addShowToUserList()">Add to watch list</button>
-    <button *ngIf="page=='user'" (click)="deleteShowFromUserList()">Delete from list</button>
+<div class="col">
+  <div class="card justify-content-center" style="background-color: #d0e8fa; color:rgb(250, 146, 11);">
+    <img [src]="show.image" alt="slika" class="card-img-top " style="width: 15%;" >
+    <div class="card-body">
+      <h5 class="card-title">
+        <p><a [routerLink]="['/seasons',show.id]">Show seasons</a></p>
+        <p>{{show.id}}</p>
+        <p><a href="show.url">{{show.name}}</a></p>
+        <p>{{show.type}}</p></h5>
+        <p>{{show.language}}</p>
+        <p>{{show.genres}}</p>
+        <p>{{show.status}}</p>
+        <p>{{show.premiered}}</p>
+        <p>{{show.rating}}</p>
+
+        <p [innerHtml]= "show.summary"></p>
+        <button *ngIf="page=='shows'" (click)="addShowToUserList()" class="btn btn-outline-success">Add to watch list</button>
+    <button *ngIf="page=='user'" (click)="deleteShowFromUserList()" class="btn btn-outline-danger">Delete from list</button>
+    </div>
+  </div>
 </div>

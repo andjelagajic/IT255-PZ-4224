@@ -1,7 +1,8 @@
 <div>
-    Welcome : {{(user$ | async)?.username}}
+    <div style="background-color: #e8f5ff; color:rgb(97, 97, 97);"> Welcome:  {{(user$ | async)?.username}} </div>
 
-    <p *ngIf = "(user$ | async)?.list?.length==0">No saved shows. <br> You can save show by clicking on save to user-list button. </p>
+
+    <p *ngIf = "(user$ | async)?.list?.length==0" class="alert alert-danger" role="alert">No saved shows. <br> You can save show by clicking on save to user-list button. </p>
 
     <app-show *ngFor="let item of (user$ | async)?.list" [show]="item" [page]="page"></app-show>
 </div>

@@ -1,6 +1,11 @@
-<div class="container bg-dark"><h2>HOME</h2>
+<div class="nav justify-content-center " style="background-color:  #e8f5ff;">
+  <div class="row ">
+  <h2 class="col" style="color: rgb(97, 97, 97);">HOME</h2>
 
-<input type="search" name="" id="" placeholder="search shows by name" (input)="searchShowsByName($event)">
+  <div class="col-md-auto">
+  <nav class="navbar "><input class="form-control mr-sm-2" type="search" name="" id="" placeholder="Search by show name" (input)="searchShowsByName($event)"></nav></div>
 
+  <app-show-list [page]="page"></app-show-list>
+  </div>
+</div>
 
-<app-show-list [page]="page"></app-show-list></div>

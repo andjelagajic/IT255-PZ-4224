@@ -1,9 +1,13 @@
-<div style="border: green 1px solid;">
-    <p><a [href]="episode.url">{{episode.name}}</a></p>
-    <p>Season: {{episode.season}}</p>
-    <p>Number of episode: {{episode.number}}</p>
-    <p>Airdate: {{episode.airdate}}</p>
-    <p>rating: {{episode.rating}}</p>
-    <img [src]="episode.image" alt="">
-    <p [innerHtml]="episode.summary"></p>
+<div class="col">
+  <div class="card justify-content-center" style="background-color: #c5e6ff; width: 99%; color:rgb(250, 146, 11);">
+    <img [src]="episode.image" alt="" class="card-img-top " style="width: 30%;" >
+    <div class="card-body">
+      <h5 class="card-title"><p><a [href]="episode.url">{{episode.name}}</a></p>
+        <p>Season: {{episode.season}}</p>
+        <p >Number of episode: {{episode.number}}</p>
+        <p>Airdate: {{episode.airdate}}</p>
+        <p><em>Rating:</em> {{episode.rating}}</p></h5>
+      <p  [innerHtml]="episode.summary" class="card-text"></p>
+    </div>
+  </div>
 </div>

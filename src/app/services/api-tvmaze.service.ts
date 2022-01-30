@@ -43,7 +43,7 @@ export class ApiTvmazeService {
         number: item.number,
         airdate: item.airdate,
         rating: item.rating.average,
-        image: item.image.medium,
+        image: item?.image?.medium,
         summary: item.summary })),
       );
   }

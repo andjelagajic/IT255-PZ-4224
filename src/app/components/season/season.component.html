@@ -1,9 +1,14 @@
-<div style="border: brown 1px solid;">
-    <p>{{season.id}}</p>
-    <p><a [href]="season.url">{{season.url}}</a></p>
-    <p> Season number: {{season.number}}</p>
-    <p> Number of episodes: {{season.episodeOrder}}</p>
-    <p> Premiere date: {{season.premiereDate}}</p>
-    <button type="button" (click)="toggleEpisodeList()">Episodes</button>
+    <div class="col">
+      <div class="card justify-content-center" style="background-color: #e8f5ff; color:rgb(250, 146, 11);">
+        <div class="card-body" style="background-color: #e8f5ff;">
+          <h5 class="card-title"><p>{{season.id}}</p>
+            <p><a [href]="season.url">{{season.url}}</a></p>
+            <p> Season number: {{season.number}}</p>
+            <p> Number of episodes: {{season.episodeOrder}}</p>
+            <p> Premiere date: {{season.premiereDate}}</p></h5>
+            <button type="button" (click)="toggleEpisodeList()" class="btn btn-outline-secondary">Episodes</button>
+        </div>
+      </div>
+    </div>
+
     <app-episode-list [ngClass]="{'show':showEpisodesList,'hide':!showEpisodesList}" ></app-episode-list>
-</div>

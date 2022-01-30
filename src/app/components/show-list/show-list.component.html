@@ -1,7 +1,10 @@
-<select name="" id="" (change)="onChangeGenre($event)">
-    <option value="-1" disabled selected hidden>Genre:</option>
-    <option *ngFor="let genre of genres"  [value]="genre">{{genre}}</option>
+
+<div class="dropdown show">
+<select class="justify-content-center btn btn-secondary dropdown-toggle" name="" id="" (change)="onChangeGenre($event)">
+    <option class="dropdown-menu" value="-1" disabled selected hidden>Genre:</option>
+    <option  *ngFor="let genre of genres"  [value]="genre">{{genre}}</option>
 </select>
 
-<app-show *ngFor="let show of shows$ | async  | filterGenre:genre" [show]="show" [page]="page">
+<app-show *ngFor="let show of shows$ | async  | filterGenre:genre" [show]="show" [page]="page" >
 </app-show>
+</div>
